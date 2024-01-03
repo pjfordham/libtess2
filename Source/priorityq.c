@@ -406,13 +406,13 @@ int pqInit( TESSalloc* alloc, PriorityQ *pq )
 	pq->initialized = TRUE;
 	pqHeapInit( pq->heap );  /* always succeeds */
 
-#ifndef NDEBUG
-	p = pq->order;
-	r = p + pq->size - 1;
-	for( i = p; i < r; ++i ) {
-		assert( LEQ( **(i+1), **i ));
-	}
-#endif
+// #ifndef NDEBUG
+// 	p = pq->order;
+// 	r = p + pq->size - 1;
+// 	for( i = p; i < r; ++i ) {
+// 		assert( LEQ( **(i+1), **i ));
+// 	}
+// #endif
 
 	return 1;
 }

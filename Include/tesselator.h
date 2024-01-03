@@ -194,10 +194,11 @@ void tessDeleteTess( TESStesselator *tess );
 // Parameters:
 //   tess - pointer to tesselator object.
 //   size - number of coordinates per vertex. Must be 2 or 3.
-//   pointer - pointer to the first coordinate of the first vertex in the array.
+//   pointer - pointer to the vertex array.
 //   stride - defines offset in bytes between consecutive vertices.
 //   count - number of vertices in contour.
-void tessAddContour( TESStesselator *tess, int size, const void* pointer, int stride, int count );
+//   offset - offset to the first coordinate in the first member of the vertex
+void tessAddContour( TESStesselator *tess, int size, const void* pointer, int stride, int count, int offset );
 
 // tessSetOption() - Toggles optional tessellation parameters
 // Parameters:

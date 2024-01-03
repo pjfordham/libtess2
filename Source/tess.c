@@ -914,9 +914,9 @@ void OutputContours( TESStesselator *tess, TESSmesh *mesh, int vertexSize )
 }
 
 void tessAddContour( TESStesselator *tess, int size, const void* vertices,
-					int stride, int numVertices )
+                     int stride, int numVertices, int offset )
 {
-	const unsigned char *src = (const unsigned char*)vertices;
+	const unsigned char *src = (const unsigned char*)vertices + offset;
 	TESShalfEdge *e;
 	int i;
 
